@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter , Route, Routes } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/login';
-import SignUp from './components/signup.js';
-
-export default function App() {
+import SignUp from './components/signup';
+import AudioPlayer from './components/audioplayer';
+ function App() {
 
   return (
-    <BrowserRouter>
+    <Router>
     <Routes>
-        <Route path="/" element={<Login/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/audio" element ={<AudioPlayer/>} /> 
     </Routes>
-</BrowserRouter>
+</Router>
   );
 
 }
+export default App;
