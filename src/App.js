@@ -10,6 +10,7 @@ import AudioPlayer from './components/audioplayer';
   return (
     <Router>
     <Routes>
+        <Route path="/" element={<AudioPlayer/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/audio" element ={<AudioPlayer/>} /> 

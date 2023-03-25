@@ -6,7 +6,7 @@ function Header()
       <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
       <ul class="navbar-nav">
       <li class="nav-item">
-          <a class="nav-link" href="#">AudioHub</a>
+          <a class="nav-link" href="/audio">AudioHub</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/login">Login</a>
