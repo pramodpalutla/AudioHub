@@ -1,10 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './header';
 import Footer from './footer';
+import axios from 'axios';
+
+
 
 function SignUp() {
+
+  const [username, setUserName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  function handleUserNameChange(event) {
+    setUserName(event.target.value);
+  }
   
+  function handleEmailChange(event) {
+    setEmail(event.target.value);
+  }
+
+  function handlePassword(event) {
+    setPassword(event.target.value);
+  }
+
+  function handleSignUp() {
+    axios.post('http://localhost:8000/signup', {
+      username: username,
+      password: password,
+      email: email
+    })
+      .then(function(response) {
+        // Handle the response from the server
+        console.log("signup")
+      })
+      .catch(function(error) {
+        // Handle any errors that occur during the request
+      });
+  }
+
   return (
     <div className="maincontainer">
       <Header></Header>
@@ -19,11 +53,13 @@ function SignUp() {
             </span>
           </div>
           <div className="form-group mt-3">
-            <label>Full Name</label>
+            <label>Username</label>
             <input
-              type="email"
+              type="text"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+              value={username}
+              onChange={handleUserNameChange}
             />
           </div>
           <div className="form-group mt-3">
@@ -32,6 +68,8 @@ function SignUp() {
               type="email"
               className="form-control mt-1"
               placeholder="Email Address"
+              value={email}
+              onChange={handleEmailChange}
             />
           </div>
           <div className="form-group mt-3">
@@ -40,10 +78,12 @@ function SignUp() {
               type="password"
               className="form-control mt-1"
               placeholder="Password"
+              value={password}
+              onChange={handlePassword}
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={handleSignUp}>
               Submit
             </button>
           </div>

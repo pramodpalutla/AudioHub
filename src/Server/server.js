@@ -1,9 +1,26 @@
 const express = require('express');
-const User = require('../models/user');
-
+const authRoutes = require('./routes/auth');
 const app = express();
 const mongoose = require("mongoose");
 
+app.use(express.json());
+
+app.use((req,res,next)=>{
+    res.setHeader('Access-Control-Allow-Origin', '*'),
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE'),
+    res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization'),
+    next();
+});
+
+app.use('/auth', authRoutes);
+
+app.use((error, req,res,next) => {
+    console.log(error);
+    const status = error.statusCode || 500;
+    const message = error.message;
+    const data = error.data;
+    res.status(status).json({message: message, data: data});
+})
 
 mongoose
   .connect(
@@ -16,31 +33,25 @@ mongoose
   .then(() => {
     console.log("Database connection Success.");
 
-    const dummyUser = {
-      email: 'john.doe@example.com',
-      password: 'password123',
-    };
-    
-    User.create(dummyUser)
-      .then((user) => {
-        console.log('New user created:', user);
-      })
-      .catch((error) => {
-        console.error('Error creating user:', error);
+    app.listen(8000, () => {
+        console.log("Server is running at port 8000");
       });
+
+    // const dummyUser = {
+    //   email: 'john.doe@example.com',
+    //   password: 'password123',
+    // };
+    
+    // User.create(dummyUser)
+    //   .then((user) => {
+    //     console.log('New user created:', user);
+    //   })
+    //   .catch((error) => {
+    //     console.error('Error creating user:', error);
+    //   });
   
 
   })
   .catch((err) => {
     console.error("Mongo Connection Error", err);
-  });
-
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error: "));
-db.once("open", function () {
-  console.log("Connected successfully");
-});
-
-app.listen(3000, () => {
-    console.log("Server is running at port 3000");
   });
