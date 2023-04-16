@@ -1,9 +1,9 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 function Footer()
 {
     return (
-        <div class="jumbotron text-center bg-primary text-white">
+        <div className="container text-center bg-primary text-white">
         <p>Footer</p>
       </div>
     );
