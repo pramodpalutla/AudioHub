@@ -1,0 +1,279 @@
+{
+    "songs": [
+        {
+            "title": "Unholy",
+            "artist": "Sam Smith, Kim Petras",
+            "album": "Unholy",
+            "genre": "Pop",
+            "track_num": 46,
+            "year": 2022,
+            "filename": "046. Sam Smith - Unholy.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/046.%20Sam%20Smith%20-%20Unholy.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/046.%20Sam%20Smith%20-%20Unholy.jpg"
+        },
+        {
+            "title": "Jaded",
+            "artist": "Miley Cyrus",
+            "album": "Endless Summer Vacation",
+            "genre": "Pop",
+            "track_num": 56,
+            "year": 2023,
+            "filename": "056. Miley Cyrus - Jaded.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/056.%20Miley%20Cyrus%20-%20Jaded.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/056.%20Miley%20Cyrus%20-%20Jaded.jpg"
+        },
+        {
+            "title": "I'm Good (Blue)",
+            "artist": "David Guetta, Bebe Rexha",
+            "album": "I'm Good (Blue)",
+            "genre": "Dance",
+            "track_num": 32,
+            "year": 2022,
+            "filename": "032. David Guetta - I'm Good (Blue).mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/032.%20David%20Guetta%20-%20I%27m%20Good%20%28Blue%29.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/032.%20David%20Guetta%20-%20I%27m%20Good%20%28Blue%29.jpg"
+        },
+        {
+            "title": "Viva La Vida",
+            "artist": "Coldplay",
+            "album": "Viva La Vida or Death and All His Friends",
+            "genre": "Rock",
+            "track_num": 84,
+            "year": 2008,
+            "filename": "084. Coldplay - Viva La Vida.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/084.%20Coldplay%20-%20Viva%20La%20Vida.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/084.%20Coldplay%20-%20Viva%20La%20Vida.jpg"
+        },
+        {
+            "title": "Under The Influence",
+            "artist": "Chris Brown",
+            "album": "Indigo (Extended)",
+            "genre": "R&B",
+            "track_num": 59,
+            "year": 2019,
+            "filename": "059. Chris Brown - Under The Influence.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/059.%20Chris%20Brown%20-%20Under%20The%20Influence.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/059.%20Chris%20Brown%20-%20Under%20The%20Influence.jpg"
+        },
+        {
+            "title": "Fighting Myself",
+            "artist": "Linkin Park",
+            "album": "Fighting Myself",
+            "genre": "Alternative",
+            "track_num": 81,
+            "year": 2023,
+            "filename": "081. Linkin Park - Fighting Myself.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/081.%20Linkin%20Park%20-%20Fighting%20Myself.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/081.%20Linkin%20Park%20-%20Fighting%20Myself.jpg"
+        },
+        {
+            "title": "TRUSTFALL",
+            "artist": "P!nk",
+            "album": "TRUSTFALL",
+            "genre": "Pop",
+            "track_num": 21,
+            "year": 2023,
+            "filename": "021. P!nk - TRUSTFALL.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/021.%20P%21nk%20-%20TRUSTFALL.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/021.%20P%21nk%20-%20TRUSTFALL.jpg"
+        },
+        {
+            "title": "10:35",
+            "artist": "Ti\u00ebsto, Tate McRae",
+            "album": "10:35",
+            "genre": "Dance",
+            "track_num": 40,
+            "year": 2022,
+            "filename": "040. Ti\u00ebsto - 10_35.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/040.%20Ti%C3%ABsto%20-%2010_35.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/040.%20Ti%C3%ABsto%20-%2010_35.jpg"
+        },
+        {
+            "title": "River",
+            "artist": "Miley Cyrus",
+            "album": "Endless Summer Vacation",
+            "genre": "Pop",
+            "track_num": 39,
+            "year": 2023,
+            "filename": "039. Miley Cyrus - River.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/039.%20Miley%20Cyrus%20-%20River.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/039.%20Miley%20Cyrus%20-%20River.jpg"
+        },
+        {
+            "title": "Starboy",
+            "artist": "The Weeknd, Daft Punk",
+            "album": "Starboy",
+            "genre": "R&B",
+            "track_num": 93,
+            "year": 2016,
+            "filename": "093. The Weeknd - Starboy.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/093.%20The%20Weeknd%20-%20Starboy.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/093.%20The%20Weeknd%20-%20Starboy.jpg"
+        },
+        {
+            "title": "Die For You (Remix)",
+            "artist": "The Weeknd, Ariana Grande",
+            "album": "Die For You (Remix)",
+            "genre": "R&B",
+            "track_num": 5,
+            "year": 2023,
+            "filename": "005. The Weeknd - Die For You (Remix).mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/005.%20The%20Weeknd%20-%20Die%20For%20You%20%28Remix%29.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/005.%20The%20Weeknd%20-%20Die%20For%20You%20%28Remix%29.jpg"
+        },
+        {
+            "title": "All Of The Girls You Loved Before",
+            "artist": "Taylor Swift",
+            "album": "All Of The Girls You Loved Before",
+            "genre": "Pop",
+            "track_num": 15,
+            "year": 2019,
+            "filename": "015. Taylor Swift - All Of The Girls You Loved Before.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/015.%20Taylor%20Swift%20-%20All%20Of%20The%20Girls%20You%20Loved%20Before.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/015.%20Taylor%20Swift%20-%20All%20Of%20The%20Girls%20You%20Loved%20Before.jpg"
+        },
+        {
+            "title": "Sure Thing",
+            "artist": "Miguel",
+            "album": "All I Want Is You",
+            "genre": "R&B",
+            "track_num": 23,
+            "year": 2010,
+            "filename": "023. Miguel - Sure Thing.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/023.%20Miguel%20-%20Sure%20Thing.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/023.%20Miguel%20-%20Sure%20Thing.jpg"
+        },
+        {
+            "title": "Anti-Hero",
+            "artist": "Taylor Swift",
+            "album": "Midnights",
+            "genre": "Pop",
+            "track_num": 20,
+            "year": 2022,
+            "filename": "020. Taylor Swift - Anti-Hero.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/020.%20Taylor%20Swift%20-%20Anti-Hero.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/020.%20Taylor%20Swift%20-%20Anti-Hero.jpg"
+        },
+        {
+            "title": "Save Your Tears",
+            "artist": "The Weeknd",
+            "album": "After Hours",
+            "genre": "R&B",
+            "track_num": 76,
+            "year": 2020,
+            "filename": "076. The Weeknd - Save Your Tears.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/076.%20The%20Weeknd%20-%20Save%20Your%20Tears.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/076.%20The%20Weeknd%20-%20Save%20Your%20Tears.jpg"
+        },
+        {
+            "title": "Miracle",
+            "artist": "Calvin Harris, Ellie Goulding",
+            "album": "Miracle",
+            "genre": "Dance",
+            "track_num": 3,
+            "year": 2023,
+            "filename": "003. Calvin Harris - Miracle.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/003.%20Calvin%20Harris%20-%20Miracle.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/003.%20Calvin%20Harris%20-%20Miracle.jpg"
+        },
+        {
+            "title": "A&W",
+            "artist": "Lana Del Rey",
+            "album": "Did you know that there's a tunnel under Ocean Blvd",
+            "genre": "Alternative",
+            "track_num": 45,
+            "year": 2023,
+            "filename": "045. Lana Del Rey - A&W.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/045.%20Lana%20Del%20Rey%20-%20A%26W.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/045.%20Lana%20Del%20Rey%20-%20A%26W.jpg"
+        },
+        {
+            "title": "Can't Tame Her",
+            "artist": "Zara Larsson",
+            "album": "Can't Tame Her",
+            "genre": "Pop",
+            "track_num": 36,
+            "year": 2023,
+            "filename": "036. Zara Larsson - Can't Tame Her.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/036.%20Zara%20Larsson%20-%20Can%27t%20Tame%20Her.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/036.%20Zara%20Larsson%20-%20Can%27t%20Tame%20Her.jpg"
+        },
+        {
+            "title": "Eyes Closed",
+            "artist": "Ed Sheeran",
+            "album": "Eyes Closed",
+            "genre": "Pop",
+            "track_num": 1,
+            "year": 2023,
+            "filename": "001. Ed Sheeran - Eyes Closed.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/001.%20Ed%20Sheeran%20-%20Eyes%20Closed.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/001.%20Ed%20Sheeran%20-%20Eyes%20Closed.jpg"
+        },
+        {
+            "title": "Bad Habits",
+            "artist": "Ed Sheeran",
+            "album": "Bad Habits",
+            "genre": "Pop",
+            "track_num": 51,
+            "year": 2021,
+            "filename": "051. Ed Sheeran - Bad Habits.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/051.%20Ed%20Sheeran%20-%20Bad%20Habits.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/051.%20Ed%20Sheeran%20-%20Bad%20Habits.jpg"
+        },
+        {
+            "title": "Flowers",
+            "artist": "Miley Cyrus",
+            "album": "Flowers",
+            "genre": "Pop",
+            "track_num": 2,
+            "year": 2023,
+            "filename": "002. Miley Cyrus - Flowers.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/002.%20Miley%20Cyrus%20-%20Flowers.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/002.%20Miley%20Cyrus%20-%20Flowers.jpg"
+        },
+        {
+            "title": "Heaven",
+            "artist": "Niall Horan",
+            "album": "Heaven",
+            "genre": "Pop",
+            "track_num": 19,
+            "year": 2023,
+            "filename": "019. Niall Horan - Heaven.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/019.%20Niall%20Horan%20-%20Heaven.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/019.%20Niall%20Horan%20-%20Heaven.jpg"
+        },
+        {
+            "title": "As It Was",
+            "artist": "Harry Styles",
+            "album": "As It Was",
+            "genre": "Pop",
+            "track_num": 9,
+            "year": 2022,
+            "filename": "009. Harry Styles - As It Was.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/009.%20Harry%20Styles%20-%20As%20It%20Was.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/009.%20Harry%20Styles%20-%20As%20It%20Was.jpg"
+        },
+        {
+            "title": "Shivers",
+            "artist": "Ed Sheeran",
+            "album": "Shivers",
+            "genre": "Pop",
+            "track_num": 55,
+            "year": 2021,
+            "filename": "055. Ed Sheeran - Shivers.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/055.%20Ed%20Sheeran%20-%20Shivers.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/055.%20Ed%20Sheeran%20-%20Shivers.jpg"
+        },
+        {
+            "title": "Whistle",
+            "artist": "Jax Jones, Calum Scott",
+            "album": "Whistle",
+            "genre": "Dance",
+            "track_num": 22,
+            "year": 2023,
+            "filename": "022. Jax Jones - Whistle.mp3",
+            "url": "https://storage.googleapis.com/audiohub-bucket/Top%2025/022.%20Jax%20Jones%20-%20Whistle.mp3",
+            "albumArt": "https://storage.googleapis.com/audiohub-bucket/Top%2025/album_art/022.%20Jax%20Jones%20-%20Whistle.jpg"
+        }
+    ]
+}
