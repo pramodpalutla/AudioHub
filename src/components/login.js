@@ -1,12 +1,12 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
+// import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './header';
 import Footer from './footer';
 
 export default function Login(props) {
   return (
     <div className="maincontainer">
-      <Header></Header>
+      {/* <Header></Header> */}
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
@@ -38,7 +38,7 @@ export default function Login(props) {
         </div>
       </form>
     </div>
-    <Footer></Footer>
+    {/* <Footer></Footer> */}
     </div>
   )
 }
