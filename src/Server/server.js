@@ -1,26 +1,89 @@
-const express = require('express');
-const authRoutes = require('./routes/auth');
-const app = express();
-const mongoose = require("mongoose");
+var express = require("express");
+var app = express();
+const bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
+var cors = require('cors');
+//var multer = require('multer');
+bodyParser = require('body-parser');
+//path = require('path');
+var mongoose = require("mongoose");
 
-app.use(express.json());
+var user = require("../Server/models/user");
 
-app.use((req,res,next)=>{
-    res.setHeader('Access-Control-Allow-Origin', '*'),
-    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE'),
-    res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization'),
-    next();
+app.use(cors());
+//app.use(express.static('uploads'));
+app.use(bodyParser.json());       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: false
+}));
+
+app.post('/signup', (req, res) => {
+  
+  const username = req.body.username;
+  const password = req.body.password;
+  const email = req.body.email;
+
+  const saltRounds = 10;
+  const plaintextPassword = password;
+  
+  bcrypt.hash(plaintextPassword, saltRounds, function(err, hash) {
+    const dummyUser = {
+      username: username,
+      password: hash,
+      email: email,
+    };
+    user.create(dummyUser)
+    .then((u) => {
+      console.log('New user created:', u);
+    })
+    .catch((error) => {
+      console.error('Error creating user:', error);
+    });  
+  res.status(200).send('Sign-up successful');
+  });
+  
+  
 });
 
-app.use('/auth', authRoutes);
+/* login api */
+app.post('/login', async (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+  try {
+    const u = await user.findOne({ email: email});
+    // retrieve the hash from your database
+    if (u) {
+      const plaintextPassword = password;
+      const hash = u.password 
+      bcrypt.compare(plaintextPassword, hash, function(err, result) {
+        if(result){
+          // Successful login
+      const token = generateToken(u);
+      
+      res.status(200).json({ message: 'Login successful', token: token});
+        }
+      }
+      )}
+      
+    // } else {
+    //   // Invalid credentials
+    //   res.status(400).json({ message: 'Invalid username or password' });
+    // }
+   }catch (error) {
+    //console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
 
-app.use((error, req,res,next) => {
-    console.log(error);
-    const status = error.statusCode || 500;
-    const message = error.message;
-    const data = error.data;
-    res.status(status).json({message: message, data: data});
-})
+});
+
+const generateToken = (user) => {
+  const token = jwt.sign(
+    { id: user._id, email: user.email },
+    'shhhhhh1',
+    { expiresIn: '1h' } // optional: set the expiration time
+  );
+  return token;
+};
 
 mongoose
   .connect(
@@ -36,21 +99,6 @@ mongoose
     app.listen(8000, () => {
         console.log("Server is running at port 8000");
       });
-
-    // const dummyUser = {
-    //   email: 'john.doe@example.com',
-    //   password: 'password123',
-    // };
-    
-    // User.create(dummyUser)
-    //   .then((user) => {
-    //     console.log('New user created:', user);
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error creating user:', error);
-    //   });
-  
-
   })
   .catch((err) => {
     console.error("Mongo Connection Error", err);

@@ -24,20 +24,19 @@ function SignUp() {
     setPassword(event.target.value);
   }
 
-  function handleSignUp() {
-    axios.post('http://localhost:8000/signup', {
-      username: username,
-      password: password,
-      email: email
-    })
-      .then(function(response) {
-        // Handle the response from the server
-        console.log("signup")
-      })
-      .catch(function(error) {
-        // Handle any errors that occur during the request
+  const handleSignUp = async () => {
+    try {
+      const response = await axios.post('http://localhost:8000/signup', {
+        username: username,
+        password: password,
+        email: email,
+       
       });
-  }
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="maincontainer">

@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './header';
 import Footer from './footer';
 import axios from 'axios';
+import AudioPlayer from '../components/audioplayer';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,27 +14,41 @@ export default function Login(props) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  const navigate = useNavigate();
 
   function handleEmailChange(event) {
     setEmail(event.target.value);
   }
 
   function handlePassword(event) {
+    
     setPassword(event.target.value);
   }
 
-  function handleLogin() {
-    axios.post('http://localhost:8000/login', {
-      email: email,
-      password: password
-    })
-      .then(function(response) {
-        console.log("login")
-      })
-      .catch(function(error) {
-        // Handle any errors that occur during the request
+ 
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/login', {
+        email: email,
+        password: password,
+        
       });
-  }
+      
+      if(response.status === 200) {
+        localStorage.setItem('jwtToken', response.data.token);
+          navigate("/audio");
+          console.log("yes")
+      }
+      
+    } catch (error) {
+      if(error.response.status === 400) {
+        console.log('unauthorized')
+      }
+      
+    }
+  };
 
   return (
     <div className="maincontainer">

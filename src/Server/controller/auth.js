@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 exports.signup = (req,res,next) => {
+    alert('Sign up clicked')
     const errors = validationResult(req);
     if(!errors.isEmpty()){
         const error = new Error('Validation failed');
@@ -35,6 +36,7 @@ exports.signup = (req,res,next) => {
 };
 
 exports.login = (req,res,next) => {
+    console.log("LOGIN REQ RECEIVED");
     const email = req.body.email;
     const password = req.body.password;
     let loadedUser;
