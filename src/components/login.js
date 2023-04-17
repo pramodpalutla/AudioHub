@@ -6,6 +6,7 @@ import Footer from './footer';
 import axios from 'axios';
 import AudioPlayer from '../components/audioplayer';
 import { useNavigate } from "react-router-dom";
+import NavBar from './NavBar';
 
 
 
@@ -52,7 +53,10 @@ export default function Login(props) {
   };
 
   return (
+    <>
+     <NavBar/>
     <div className="maincontainer">
+     
       {/* <Header></Header> */}
     <div className="Auth-form-container">
       <form className="Auth-form">
@@ -92,5 +96,6 @@ export default function Login(props) {
     </div>
     {/* <Footer></Footer> */}
     </div>
+    </>
   )
 }

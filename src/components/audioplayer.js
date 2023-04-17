@@ -7,6 +7,7 @@ import SongList from "./SongList";
 import songs_data from "../data/songs_data.json";
 import SongDetail from "./SongDetail";
 import SongListHeader from "./SongListHeader";
+import withAuth from "../Server/controller/withAuth";
 
 
 for (let index = 0; index < songs_data.songs.length; index++) {
@@ -29,4 +30,4 @@ const AudioPlayerScreen = (props) => {
 );
 };
 
-export default AudioPlayerScreen;
+export default withAuth(AudioPlayerScreen);

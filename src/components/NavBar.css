@@ -10,6 +10,7 @@
     grid-column: 1/13;
     box-shadow: 0px 2px 2px rgb(10, 10, 10);
     z-index: 2;
+    
 }
 
 .app-header {
@@ -29,6 +30,8 @@ i.fa-spotify {
     right: 1rem;
     font-size: 1.8rem;
     color: white;
+    padding: 20px;
+    margin: 50px;
 }
 
 .fab:hover {
@@ -39,3 +42,18 @@ i.fa-spotify {
     cursor: pointer;
     color: #38bdf8;
 }
+
+.nav-link{
+    padding: 20px;
+    margin: 30px;
+}
+
+.nav-link:hover{
+    padding: 20px;
+    margin: 30px;
+    color: #38bdf8;
+}
+.nav-link.active {
+    color: red;
+    text-decoration: underline;
+  }

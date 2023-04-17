@@ -5,6 +5,7 @@ import { forwardsSvg, backwardsSvg, shuffleSvg } from "../svg";
 import { setPlayerState, selectSongById } from "../actions";
 import Progress from "./ProgressBar";
 import SongTime from "./SongTime";
+import NavBar from "./NavBar";
 
 const Player = ({
     selectedSongId,
