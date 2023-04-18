@@ -65,13 +65,15 @@ app.post('/login', async (req, res) => {
       }
       )}
       
-    // } else {
-    //   // Invalid credentials
-    //   res.status(400).json({ message: 'Invalid username or password' });
-    // }
+     else {
+      // Invalid credentials
+      //res.status(400).json({ message: 'Invalid username or password' });
+      throw new Error('Invalid credentials.');
+    }
    }catch (error) {
     //console.error(error);
-    res.status(500).json({ message: 'Server error' });
+    res.status(400).json({ message: 'Invalid username or password' });
+    return;
   }
 
 });

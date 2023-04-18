@@ -61,6 +61,8 @@ const SongItem = ({ song, index, selectSong, selectedSongId, playerState }) => {
             <div className="name">{song.title}</div>
             <div className="author">{song.artist}</div>
             <div className="selector">{selector()}</div>
+            
+            
         </div>
     );
 };
