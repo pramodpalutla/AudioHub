@@ -36,7 +36,8 @@ const NavBar = () => {
             <i className="fab fa-spotify"></i>
             <div className="app-header">{metadata.appName}</div>
             <div className="nav-links"></div>
-            <a className="nav-link" href="/playlist">Playlists</a>
+            <a className="nav-link" href="/audio">Top 25</a>
+            <a className="nav-link" href="/myplaylist">Playlist</a>
             </>
              )}  
             

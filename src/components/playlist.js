@@ -10,18 +10,22 @@ import SongListHeader from "./SongListHeader";
 import withAuth from "./withAuth";
 
 
-for (let index = 0; index < songs_data.songs.length; index++) {
-  const song = songs_data.songs[index];
-  song.id = index;
-}
+// for (let index = 0; index < songs_data.songs.length; index++) {
+//   const song = songs_data.songs[index];
+//   song.id = index;
+// }
 
-const AudioPlayerScreen = (props) => {
+const Playlist = (props) => {
+const songs = [] 
+
+songs.push(songs_data.songs[0])
   return (
     <React.Fragment>
+     
         <NavBar />
         <SongListHeader />
         <SongDetail />
-        <SongList songs={songs_data.songs} />
+        <SongList songs={songs} />
         <Player />
         <a href="#focused" id="focus-link" hidden>
             Go to playing element
@@ -30,4 +34,4 @@ const AudioPlayerScreen = (props) => {
 );
 };
 
-export default withAuth(AudioPlayerScreen);
+export default withAuth(Playlist);
