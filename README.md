@@ -18,9 +18,9 @@
 2. Clone this repo to your computer
 3. Change your current directory to the root of the cloned repo
 4. You can start the development server by running the following command: 
-    > npm start
+    > **npm start**
 5. Open a new terminal session and navigate to the server folder and start the backend server by using the following command:
-    > node server.js
+    > **node server.js**
 6. Once the server starts up, You can open the app by navigating to http://localhost:3000
 
 > Note: The installation steps would change if you want to deploy the app to a cloud service provider.
