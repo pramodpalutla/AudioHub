@@ -31,7 +31,7 @@ export default function Login(props) {
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/login', {
+      const response = await axios.post('http://35.193.89.249:8000/login', {
         email: email,
         password: password,
         

@@ -23,7 +23,7 @@ const [songs, setSongs] = useState([]);
 useEffect(() => {
   const fetchSongs = async () => {
     const token = localStorage.getItem('jwtToken');
-    const response = await axios.post("http://localhost:8000/playlist", {
+    const response = await axios.post("http://35.193.89.249:8000/playlist", {
         token: token,
       });
     const songsData = response.data;

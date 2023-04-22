@@ -3,36 +3,61 @@ import "./SongItem.css";
 import { connect, useDispatch } from "react-redux";
 import { selectSong } from "../actions";
 import axios from "axios";
+import { toast } from 'react-toastify';
+
 const SongItem = ({ song, index, selectSong, selectedSongId, playerState }) => {
     const [, setHovered] = useState(false);
     const dispatch = useDispatch();
 
     const selector = () => {
-        function addToPlaylist(id){
-            const token = localStorage.getItem('jwtToken');
+        // function addToPlaylist(id) {
+        //     const token = localStorage.getItem('jwtToken');
 
-            try {
-                const response = axios.post('http://localhost:8000/addToPlaylist', {
-                  token: token,
-                  songId: id,
-                });
-                
-                if(response.status === 200) {
-                    console.log('song added to playlist')
+        //     try {
+        //         const response = axios.post('http://35.193.89.249:8000/addToPlaylist', {
+        //             token: token,
+        //             songId: id,
+        //         });
+
+        //         if (response.status === 200) {
+        //             toast.success('Song added to playlist!');
+        //             console.log('song added to playlist')
+        //         }
+        //         if (response.status === 400 || response.status === 401) {
+        //             console.log('haha error')
+        //         }
+
+        //     } catch (error) {
+        //         toast.error('Failed to add song to playlist!');
+        //         if (error.response.status === 400) {
+        //             //console.log(error.response.data.message)
+
+        //             //   setError(error.response.data.message)
+        //             return;
+        //         }
+
+        //     }
+        // }
+
+
+        function addToPlaylist(id) {
+            const token = localStorage.getItem('jwtToken');
+    
+            return axios.post('http://35.193.89.249:8000/addToPlaylist', {
+                token: token,
+                songId: id,
+            })
+            .then(response => {
+                if (response.status === 200) {
+                    toast.success('Song added to playlist')
                 }
-                if (response.status === 400 || response.status === 401) {
-                  console.log('haha error')
+            })
+            .catch(error => {
+                if (error.response.status === 400) {
+                    console.log(error.response.data.message)
                 }
-                
-              } catch (error) {
-                if(error.response.status === 400) {
-                  //console.log(error.response.data.message)
-          
-                //   setError(error.response.data.message)
-                  return;
-                }
-                
-              }
+                toast.error('Error adding song to playlist')
+            });
         }
         return (
             <a
@@ -40,16 +65,15 @@ const SongItem = ({ song, index, selectSong, selectedSongId, playerState }) => {
                 onClick={() => addToPlaylist(song._id)}
             >
                 <svg
-                    role="img"
-                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
                     width="24"
+                    height="24"
                     viewBox="0 0 24 24"
-                    className="download-link"
                 >
                     <path
-                        d="M11.5 0C5.149 0 0 5.148 0 11.5 0 17.851 5.149 23 11.5 23S23 17.851 23 11.5C23 5.148 17.851 0 11.5 0zm0 22C5.71 22 1 17.29 1 11.5S5.71 1 11.5 1 22 5.71 22 11.5 17.29 22 11.5 22zm.499-6.842V5h-1v10.149l-3.418-3.975-.758.652 4.678 5.44 4.694-5.439-.757-.653-3.439 3.984z"
                         fill="currentColor"
-                    ></path>
+                        d="M19 11h-6V5c0-.55-.45-1-1-1s-1 .45-1 1v6H5c-.55 0-1 .45-1 1s.45 1 1 1h6v6c0 .55.45 1 1 1s1-.45 1-1v-6h6c.55 0 1-.45 1-1s-.45-1-1-1z"
+                    />
                 </svg>
             </a>
         );

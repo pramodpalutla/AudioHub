@@ -7,7 +7,8 @@ const SongListHeader = () => {
             <div className="name">Title</div>
             <div className="author">Artist</div>
             <div className="selector">
-                <i className="fas fa-chevron-down"></i>
+                {/* <i className="fas fa-chevron-down"></i> */}
+                Add to playlist
             </div>
         </div>
     );

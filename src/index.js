@@ -7,7 +7,6 @@ import reducers from "./reducers";
 import { legacy_createStore as createStore} from 'redux'
 import { Provider } from "react-redux";
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <Provider
@@ -16,8 +15,8 @@ root.render(
                 window.__REDUX_DEVTOOLS_EXTENSION__ &&
                     window.__REDUX_DEVTOOLS_EXTENSION__()
             )}
-        >
-            <App />
+        > 
+            <App />        
         </Provider>
 );
 
