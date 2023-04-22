@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './header';
 import Footer from './footer';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 
 
@@ -40,7 +41,7 @@ function SignUp() {
 
   return (
     <div className="maincontainer">
-      <Header></Header>
+      <NavBar />
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">

@@ -1,38 +1,40 @@
-import React, { useState, useRef } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-import Header from './header';
-import Footer from './footer';
-import "../App.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import NavBar from "./NavBar";
+import Player from "./Player";
+import SongList from "./SongList";
+import SongDetail from "./SongDetail";
+import SongListHeader from "./SongListHeader";
+import withAuth from "./withAuth";
 
 const AudioPlayerScreen = (props) => {
-  //   const [isPlaying, setIsPlaying] = useState(false);
-  //   const audioRef = useRef(null);
+  const [songs, setSongs] = useState([]);
 
-  //   const togglePlay = () => {
-  //     setIsPlaying(!isPlaying);
-  //     if (!isPlaying) {
-  //       audioRef.current.play();
-  //     } else {
-  //       audioRef.current.pause();
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchSongs = async () => {
+      const response = await axios.get("http://localhost:8000/songs");
+      const songsData = response.data;
+      for (let i = 0; i < songsData.length; i++) {
+        songsData[i].id = i;
+      }
+      console.log(songsData)
+      setSongs(songsData);
+    };
+    fetchSongs();
+  }, []);
 
   return (
-    <div className='maincontainer'>
-      <Header></Header>
-      <div style={{bottom:0, width:"100vw", position: 'absolute', display: 'flex', justifyContent: 'center'}}>
-      <AudioPlayer
-        autoPlay
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-        onPlay={e => console.log("onPlay")}
-      // other props here
-      />
-      </div>
-
-    </div>
+    <React.Fragment>
+      <NavBar />
+      <SongListHeader />
+      <SongDetail />
+      <SongList songs={songs} />
+      <Player />
+      <a href="#focused" id="focus-link" hidden>
+        Go to playing element
+      </a>
+    </React.Fragment>
   );
 };
 
-export default AudioPlayerScreen;
+export default withAuth(AudioPlayerScreen);

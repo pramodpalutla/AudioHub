@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
-import Header from './header';
-import Footer from './footer';
+import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css"
 import axios from 'axios';
-import AudioPlayer from '../components/audioplayer';
 import { useNavigate } from "react-router-dom";
+import NavBar from './NavBar';
+import "../App.css";
 
 
 
@@ -13,6 +13,7 @@ export default function Login(props) {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
 
   const navigate = useNavigate();
 
@@ -41,18 +42,26 @@ export default function Login(props) {
           navigate("/audio");
           console.log("yes")
       }
+      if (response.status === 400 || response.status === 401) {
+        console.log('haha error')
+      }
       
     } catch (error) {
       if(error.response.status === 400) {
-        console.log('unauthorized')
+        //console.log(error.response.data.message)
+
+        setError(error.response.data.message)
+        return;
       }
       
     }
   };
 
   return (
+    <>
+     <NavBar/>
     <div className="maincontainer">
-      <Header></Header>
+     
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
@@ -78,6 +87,7 @@ export default function Login(props) {
               onChange={handlePassword}
             />
           </div>
+          {error && <div className="alert alert-danger my-3">{error}</div>}
           <div className="d-grid gap-2 mt-3">
             <button type="submit" className="btn btn-primary" onClick={handleLogin}>
               Submit
@@ -89,7 +99,7 @@ export default function Login(props) {
         </div>
       </form>
     </div>
-    <Footer></Footer>
     </div>
+    </>
   )
 }
