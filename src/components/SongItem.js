@@ -2,14 +2,43 @@ import { useState } from "react";
 import "./SongItem.css";
 import { connect, useDispatch } from "react-redux";
 import { selectSong } from "../actions";
-
+import axios from "axios";
 const SongItem = ({ song, index, selectSong, selectedSongId, playerState }) => {
     const [, setHovered] = useState(false);
     const dispatch = useDispatch();
 
     const selector = () => {
+        function addToPlaylist(id){
+            const token = localStorage.getItem('jwtToken');
+
+            try {
+                const response = axios.post('http://localhost:8000/addToPlaylist', {
+                  token: token,
+                  songId: id,
+                });
+                
+                if(response.status === 200) {
+                    console.log('song added to playlist')
+                }
+                if (response.status === 400 || response.status === 401) {
+                  console.log('haha error')
+                }
+                
+              } catch (error) {
+                if(error.response.status === 400) {
+                  //console.log(error.response.data.message)
+          
+                //   setError(error.response.data.message)
+                  return;
+                }
+                
+              }
+        }
         return (
-            <a draggable="false" href={song.url}>
+            <a
+                draggable="false"
+                onClick={() => addToPlaylist(song._id)}
+            >
                 <svg
                     role="img"
                     height="24"
@@ -61,8 +90,8 @@ const SongItem = ({ song, index, selectSong, selectedSongId, playerState }) => {
             <div className="name">{song.title}</div>
             <div className="author">{song.artist}</div>
             <div className="selector">{selector()}</div>
-            
-            
+
+
         </div>
     );
 };

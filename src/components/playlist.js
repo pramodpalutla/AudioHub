@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 // import "./App.css";
 import NavBar from "./NavBar";
 import Player from "./Player";
@@ -16,9 +17,26 @@ import withAuth from "./withAuth";
 // }
 
 const Playlist = (props) => {
-const songs = [] 
 
-songs.push(songs_data.songs[0])
+const [songs, setSongs] = useState([]);
+
+useEffect(() => {
+  const fetchSongs = async () => {
+    const token = localStorage.getItem('jwtToken');
+    const response = await axios.post("http://localhost:8000/playlist", {
+        token: token,
+      });
+    const songsData = response.data;
+    for (let i = 0; i < songsData.length; i++) {
+      songsData[i].id = i;
+    }
+    console.log(songsData)
+    setSongs(songsData);
+  };
+  fetchSongs();
+}, []);
+
+
   return (
     <React.Fragment>
      
