@@ -3,7 +3,7 @@
 ## An audio player app made using the MERN stack
 
 > Demo Video
->> [![](https://markdown-videos.deta.dev/youtube/KWXMnNukZBg)](https://youtu.be/KWXMnNukZBg)
+>> [![](https://markdown-videos.deta.dev/youtube/r83ZNh1XrZU)](https://youtu.be/r83ZNh1XrZU)
 
 > Prerequisites - This guide assumes you have prior experience setting up projects using the following technologies:
 > 1. MongoDB
@@ -18,9 +18,9 @@
 2. Clone this repo to your computer
 3. Change your current directory to the root of the cloned repo
 4. You can start the development server by running the following command: 
-    > npm start
+    > **npm start**
 5. Open a new terminal session and navigate to the server folder and start the backend server by using the following command:
-    > node server.js
+    > **node server.js**
 6. Once the server starts up, You can open the app by navigating to http://localhost:3000
 
 > Note: The installation steps would change if you want to deploy the app to a cloud service provider.

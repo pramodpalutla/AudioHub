@@ -6,13 +6,16 @@ import SongList from "./SongList";
 import SongDetail from "./SongDetail";
 import SongListHeader from "./SongListHeader";
 import withAuth from "./withAuth";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AudioPlayerScreen = (props) => {
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
     const fetchSongs = async () => {
-      const response = await axios.get("http://localhost:8000/songs");
+      const response = await axios.get("http://35.193.89.249:8000/songs");
       const songsData = response.data;
       for (let i = 0; i < songsData.length; i++) {
         songsData[i].id = i;
@@ -25,7 +28,9 @@ const AudioPlayerScreen = (props) => {
 
   return (
     <React.Fragment>
+      
       <NavBar />
+      <ToastContainer />
       <SongListHeader />
       <SongDetail />
       <SongList songs={songs} />
