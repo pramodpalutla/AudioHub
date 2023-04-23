@@ -3,7 +3,7 @@
 ## An audio player app made using the MERN stack
 
 > Demo Video
->> [![](https://markdown-videos.deta.dev/youtube/KWXMnNukZBg)](https://youtu.be/KWXMnNukZBg)
+>> [![](https://markdown-videos.deta.dev/youtube/r83ZNh1XrZU)](https://youtu.be/r83ZNh1XrZU)
 
 > Prerequisites - This guide assumes you have prior experience setting up projects using the following technologies:
 > 1. MongoDB
